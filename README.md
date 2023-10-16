@@ -9,9 +9,9 @@
   Add your open source license, GitHub uses the MIT license.
 -->
 
-# Java Application to Implement Bank Functionality
+# Aquarium Project
 
-The java program developed here is to implement bank functionality. The user can create an account, check,  deposit money, withdraw, and also search account. At first, we created an interface called the central bank to do a few operations mentioned above. Then we created three subclass UNB, FGB, and NBD these classes will take customer account details and then we created a class Bankdriver to invoke all the methods in the subclasses.
+Java Based application to demonstrate how to use OOP principles, for example interface, inheritance.
 
 </header>
 
@@ -34,13 +34,45 @@ TBD-step-1-information
 
 ### :keyboard: Activity: TBD-step-1-name
 -->
-Implementing classes/ interfaces namely Customer, Account, and CentralBank with required member variables and functions.
+For example, class <b>InsideContainer</b> is represent the Fish Container for the Aquarium. At its constructor we initialize the baseBackground for the water image, and initialize fishCollection variable to hold the fishes. <br />
+InsideContainer, the paint method. In the paint method we override:
+- Create a buffer image for Double Buffering (Drawing Image in memory first)
+- Draw the background SeaScape
+- Loop all fishCollection and draw the fish current image ( each fish will have two type of image, left or right).<br />
+<p>For example, <b>Fish Abstract Class</b>. Fish is an abstract class, this class cannot be instantiate. We will need to inherits from Fish and make a new class, for example RedFish.
+<p>The <b>RedFish class</b>, use static initializer to load images, for example, fish-red.png and fish-red-right.png You will see that RedFish will be forced to override two abstract methods from Fish class:<br />
+- getLeftImage()<br />
+- getRightImage()<br />
+<p>But many methods its already inherited from Fish class:<br />
+- moveUp()<br />
+- moveDown()<br />
+- moveLeft()<br />
+- moveRight()<br />
+- getCurrentImage()<br />
+- run() - this is for Runnable thread
+<p>Some of them is either protected or private.
+<b>private method</b> in Fish class means the method is only visible inside the Fish class, and cannot be invoke from outside Fish class, for examples:
+- randomStartPosition<br />
+- randomMovementArea<br />
+- randomHorizontalDirection<br />
+- randomVerticalDirection<br />
+- randomMinLeft<br />
+- randomMaxRight<br />
+- randomMinTop<br />
+- randomMaxBottom<br />
+<b>protected method</b> in Fish class means the method is only visible inside the Fish class and it subclasses, so RedFish as a subclass still can invoke it directly:<br />
+- setCurrentImage(Image currentImage)<br /> By providing private modifiers, we hide the complexity of the Fish class, so when we create a new class, extending from Fish, we can only see the public/protected and can override the required method.
+<p><b>Using FishFactory Class</b>
+FishFactory is a class that can be used to instantiate various kinds of Fish, we are recommending to create a fish object using FishFactory.
+The FishFactory will read the index file and load it to program.
+<p><b>Easily adding new Fish</b><br />
+- Create a new class for example YellowFish.java in package.<br />
+- Implements the required method, make sure you use image, for example fish-yellow.png and fish-yellow-right.png<br />
+- Put those images in src/main/resources.<br />
+- Add some line the index file.<br />
 
-## Implementation the subclasses:
-Implementing the subclasses UNB, NBD, and FGB with required member variables and functions.
-
-## Example of UML diagram:
-<p align="center"><img align="center" src="https://github.com/akakiev/long-term-project-bank-java/blob/main/b1.png" height="300" width="400" /></p>
+## Example of UI:
+<p align="center"><img align="center" src="" height="300" width="400" /></p>
 
 <footer>
 
