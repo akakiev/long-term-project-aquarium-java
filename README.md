@@ -72,7 +72,8 @@ The FishFactory will read the index file and load it to program.
 - Add some line the index file.<br />
 
 ## Example of UI:
-<p align="center"><img align="center" src="" height="300" width="400" /></p>
+<p align="center"><img align="center" src="https://github.com/akakiev/long-term-project-aquarium-java/blob/main/aqua1.jpg" height="300" width="400" /></p>
+<p align="center"><img align="center" src="https://github.com/akakiev/long-term-project-aquarium-java/blob/main/aqua2.jpg" height="300" width="400" /></p>
 
 <footer>
 
